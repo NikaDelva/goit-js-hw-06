@@ -2,11 +2,11 @@ const inputEl = document.querySelector('#name-input');
 const spanEl = document.querySelector('#name-output');
 
 const onInputCreate = event => {
-    if (inputEl.value === '') {
-        spanEl.innerHTML = 'Anonymous';
+    if (!inputEl.value) {
+        spanEl.textContent = 'Anonymous';
         return
     } 
-    spanEl.innerHTML = inputEl.value;
+    spanEl.textContent = inputEl.value;
 }
 
 inputEl.addEventListener('input', onInputCreate);

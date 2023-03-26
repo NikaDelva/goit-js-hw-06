@@ -4,9 +4,9 @@ const onInputElBlur = event => {
     if (inputEl.value.length < inputLength) {
         inputEl.classList.add('invalid')
         return
-    } else (inputEl.value.length > inputLength)
+    }
+    inputEl.classList.remove('invalid')
     inputEl.classList.add('valid')
-    return
 }
     
 

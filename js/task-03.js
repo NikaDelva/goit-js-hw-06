@@ -18,7 +18,7 @@ const imagesEl = document.querySelector('.gallery');
 function createTemplate(images) {
   return images.map(({ url, alt }) =>
     `<li class = image-card>
-    <img src="${url} alt="${alt}">
+    <img src="${url}" alt="${alt}">
     </li>`).join('\n');
 }
 
