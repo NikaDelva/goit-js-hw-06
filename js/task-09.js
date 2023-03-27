@@ -7,10 +7,10 @@ function getRandomHexColor() {
 const bodyEl = document.querySelector('body');
 const colorEl = document.querySelector('.color');
 const changeColorEl = document.querySelector('.change-color');
-
 const onChangeColor = event => {
-  bodyEl.style.backgroundColor = getRandomHexColor();
-  colorEl.textContent = getRandomHexColor();
+  const colorRandom = getRandomHexColor();
+  bodyEl.style.backgroundColor = colorRandom;
+  colorEl.textContent = colorRandom;
 }
 
 changeColorEl.addEventListener('click', onChangeColor);

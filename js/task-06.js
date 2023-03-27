@@ -1,12 +1,14 @@
 const inputEl = document.querySelector('input')
-const inputLength = inputEl.getAttribute('data-length')
+const inputLength = Number(inputEl.getAttribute('data-length'));
+console.log(inputLength)
 const onInputElBlur = event => {
-    if (inputEl.value.length < inputLength) {
-        inputEl.classList.add('invalid')
-        return
+    if (inputEl.value.length !== inputLength) {
+        inputEl.classList.remove('valid');
+        inputEl.classList.add('invalid');
+    } else if (inputEl.value.length === inputLength) {
+        inputEl.classList.remove('invalid');
+        inputEl.classList.add('valid');
     }
-    inputEl.classList.remove('invalid')
-    inputEl.classList.add('valid')
 }
     
 
